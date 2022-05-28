@@ -43,6 +43,6 @@ public class Domaci2705 {
         System.out.println("New URL: " + newURL);
 
         // Ne traži se u zadatku, uradio sam zbog vežbe
-        driver.navigate().back();
+        // driver.navigate().back();
     }
 }
