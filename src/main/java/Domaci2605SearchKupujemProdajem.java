@@ -46,8 +46,9 @@ public class Domaci2605SearchKupujemProdajem {
 
 
             //Thread.sleep(20000);
-            // NAPOMEN: Program je odradio klik na prvi oglas ali treba da se sačeka bukvalno par minuta
-            WebElement element = driver.findElement(By.xpath("//*[@id='adDescription7321776']/div/section[2]/div[1]/div[1]/a"));
+            // NAPOMENA: Program je odradio klik na prvi oglas ali treba da se sačeka bukvalno par minuta
+            //WebElement element = driver.findElement(By.xpath("//*[@id='adDescription7321776']/div/section[2]/div[1]/div[1]/a"));
+            WebElement element = listaOglasa.get(0); // RADIIIII !
             element.sendKeys(Keys.ENTER);
 
             // Dokaz da je otvorio prvi oglas
