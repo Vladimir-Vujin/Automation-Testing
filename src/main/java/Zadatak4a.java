@@ -22,10 +22,10 @@ public class Zadatak4a {
         driver.get("https://www.w3schools.com/sql/");
 
         // ručno formiranje xPath-a   xpath = // tagname[@Attribute = 'Value']
-        //     //a[contains(@class, 'w3-bar-item')]
-        //     //*[@id="topnav"]
-        //     //*[@id="topnav"]/div/div[1]
-        //     //*[@id="topnav"]/div/div[1]/a[9]
+        // a[contains(@class, 'w3-right') and text()='Next ❯']
+        // *[@id="topnav"]
+        // *[@id="topnav"]/div/div[1]
+        // *[@id="topnav"]/div/div[1]/a[9]
 
         // Kljucna rec je CONTAINS
         List<WebElement> elementLst = driver.findElements(By.xpath("//*[@id='topnav']/div/div[1]/a[contains(@class, 'w3-bar-item')]"));
