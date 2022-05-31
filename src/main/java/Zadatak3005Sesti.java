@@ -35,8 +35,12 @@ public class Zadatak3005Sesti {
 
         List<WebElement> navListElements = driver.findElements(By.xpath("//*[@id=\"primary-menu\"]/ul/li/a"));
 
-        for(int i = 0; i < 5; i++){
+        /*for(int i = 0; i < 5; i++){
             System.out.println(navListElements.get(i).getAttribute("href"));
+        }*/
+
+        for (WebElement element : navListElements) {
+            element.getAttribute("href");
         }
 
         driver.close();

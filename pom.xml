@@ -18,7 +18,15 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.1.4</version>
+            <version>4.2.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.6.0</version>
+            <!-- OVO BRI{EMO DA BI TEST RADIO U CITAVOM PROJEKTU A NE SAMO U TEST FOLDERU-->
+            <!--<scope>test</scope>-->
         </dependency>
 
     </dependencies>
