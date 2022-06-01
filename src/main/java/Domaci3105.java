@@ -34,7 +34,7 @@ public class Domaci3105 {
 
     @AfterClass
     public void afterClass() {
-       // driver.close();
+       driver.close();
     }
 
     @Test
@@ -42,7 +42,32 @@ public class Domaci3105 {
         WebElement desktopClick = driver.findElement(By.xpath("//*[@id=\"ContentPlaceholder1_T53129E6C012_Col00\"]/nav/div/div[2]/a[2]"));
         desktopClick.click();
 
-        WebElement element = driver.findElement(By.id("desktop"));
-        Assert.assertEquals(true, element.isDisplayed());
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        String actualClass = desktopClick.getAttribute("class");
+        String expectedClass = "NavAlt-anchor u-b0 is-active";
+
+        Assert.assertEquals(actualClass, expectedClass);
+    }
+
+    @Test
+    public void testMobileClick() {
+        WebElement mobileClick = driver.findElement(By.xpath("//*[@id=\"ContentPlaceholder1_T53129E6C012_Col00\"]/nav/div/div[2]/a[3]"));
+        mobileClick.click();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        String actualClass = mobileClick.getAttribute("class");
+        String expectedClass = "NavAlt-anchor u-b0 is-active";
+
+        Assert.assertEquals(actualClass, expectedClass);
     }
 }
